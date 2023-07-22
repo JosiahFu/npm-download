@@ -1,0 +1,32 @@
+{
+  "name": "@tater-archives/download",
+  "version": "0.1.0",
+  "description": "Simple download file utility for browser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "lint": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JosiahFu/npm-download.git"
+  },
+  "keywords": [
+    "download",
+    "file",
+    "browser"
+  ],
+  "author": "Josiah Fu <josiahfu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JosiahFu/npm-download/issues"
+  },
+  "homepage": "https://github.com/JosiahFu/npm-download#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
+    "eslint": "^8.45.0",
+    "typescript": "^5.1.6"
+  }
+}
