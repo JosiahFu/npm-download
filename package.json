@@ -1,6 +1,6 @@
 {
-  "name": "@tater-archives/download",
-  "version": "0.1.0",
+  "name": "@tater-archives/file-dl",
+  "version": "0.1.2",
   "description": "Simple download file utility for browser",
   "main": "index.js",
   "scripts": {
