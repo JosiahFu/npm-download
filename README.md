@@ -1,4 +1,4 @@
-# @tater-archive/download
+# `@tater-archives/file-dl`
 
 A simple utility to create a file from a string and download it in the browser.
 
