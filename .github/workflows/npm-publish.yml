@@ -18,17 +18,18 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run build
+      - uses: actions/upload-artifact@v3
+        with:
+          name: package
+          path: .
 
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/download-artifact@v3
         with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org/
-      - run: npm ci
+          name: my-artifact
       - run: npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
