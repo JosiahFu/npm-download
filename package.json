@@ -1,6 +1,6 @@
 {
   "name": "@tater-archives/file-dl",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "description": "Simple download file utility for browser",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

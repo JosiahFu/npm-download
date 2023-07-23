@@ -1,6 +1,6 @@
 # @tater-archive/download
 
-Simple utility to download a file in the browser.
+A simple utility to create a file from a string and download it in the browser.
 
 ## Example Usage
 
