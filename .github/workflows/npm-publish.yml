@@ -18,18 +18,21 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run build
-      - uses: actions/upload-artifact@v3
-        with:
-          name: package
-          path: .
+        # - uses: actions/upload-artifact@v3
+        #   with:
+        #     name: dist
+        #     path: dist
 
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          name: my-artifact
+          node-version: 16
+      - run: npm ci
+      - run: npm run build
       - run: npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
