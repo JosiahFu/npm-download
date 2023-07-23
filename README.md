@@ -4,6 +4,8 @@ Simple utility to download a file in the browser.
 
 ## Example Usage
 
+With an `<a>` element:
+
 ```js
 // Get the anchor
 const downloadAnchor = document.getElementById('download');
@@ -14,6 +16,8 @@ downloadAnchor.href = url;
 // Set the filename
 downloadAnchor.download = 'lorem.txt';
 ```
+
+As a triggered event:
 
 ```js
 // Get the button
