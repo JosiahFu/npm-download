@@ -10,9 +10,9 @@ With an `<a>` element:
 // Get the anchor
 const downloadAnchor = document.getElementById('download');
 // Generate URL
-const url = getDownloadUrl('Lorem ipsum dolor sit amet');
+const uri = getDownloadURI('Lorem ipsum dolor sit amet');
 // Set the URL
-downloadAnchor.href = url;
+downloadAnchor.href = uri;
 // Set the filename
 downloadAnchor.download = 'lorem.txt';
 ```
@@ -26,6 +26,14 @@ const downloadButton = document.getElementById('download');
 downloadButton.addEventListner('click', () => {
     download('Lorem ipsum dolor sit amet', 'lorem.txt');
 });
+```
+
+You can use it in the browser via [esm.sh](https://esm.sh) or [unpkg](https://unpkg.com).
+
+```js
+import { download, getDownloadURI } from 'https://esm.sh/@tater-archives/file-dl';
+// or
+import { download, getDownloadURI } from 'https://unpkg.com/@tater-archives/file-dl';
 ```
 
 **WARNING:** When using the `download()` function, Chrome will prevent
