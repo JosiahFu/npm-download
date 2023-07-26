@@ -4,11 +4,16 @@
  * @param content The text content of the file.
  * @returns The URL to download the file. You can use this as the `href` for an anchor tag.
  */
-function getDownloadURL(content: string): string {
+function getDownloadURI(content: string): string {
     const blob = new Blob([content], { type: 'text/plain; encoding=utf8' });
     const url = window.URL.createObjectURL(blob);
     return url;
 }
+
+/**
+ * @deprecated use `getDownloadURI` instead
+ */
+const getDownloadURL = getDownloadURI;
 
 /** Automatically downloads a file from text content.
  * 
@@ -20,9 +25,9 @@ function getDownloadURL(content: string): string {
  */
 function download(content: string, filename: string): void {
     const link = document.createElement('a');
-    link.href = getDownloadURL(content);
+    link.href = getDownloadURI(content);
     link.download = filename; link.click();
     link.remove();
 }
 
-export { getDownloadURL, download };
+export { getDownloadURI, getDownloadURL, download };
